@@ -1,0 +1,39 @@
+spring一个接口多个实现类的配置使用
+
+ @Autowired
+ @Qualifier("service)
+ EmployeeService employeeService
+
+ 或者使用@Resource 注解
+
+  @Resource(name="service")
+  EmployeeService employeeService;
+
+  Spring @Qualifier 注解,一个service 接口,有多个实现时,如何在controller 只引入service 接口,进而实现引入具体bean
+  https://blog.csdn.net/kzcming/article/details/84333799
+
+
+@resource、@Autowired、@Service在一个接口多个实现类中的应用
+https://www.cnblogs.com/zl181015/p/10075281.html
+
+
+
+1）利用@Service注解自动将类ImgDataDao和类PayDataDao注解为bean，id为imgDataDao和payDataDao，即类ImgDataDao和类PayDataDao的第一个字母小写的id。
+
+2）@Resource按byName自动注入，@Autowired按byType自动注入；
+
+3）@Resource可用@Autowired替换
+
+4）当不想用默认的imgDataDao和payDataDao----id命名时，可用变为如下：
+
+@Resource(name="imgDataDao")                             
+
+private DataDao xx;
+
+或者：
+
+@Autowired
+
+@Qualifier("imgDataDao")
+
+private DataDao yy;

@@ -1,0 +1,30 @@
+ ApplicationContext applicationContext =new FileSystemXmlApplicationContext("resources/setList.xml");
+
+
+  SayHell sayHell =  applicationContext.getBean("listBean",SayHell.class);
+  sayHell.sayHello();
+  
+  SayHelloImpl4 sayHell4 =  (SayHelloImpl4) applicationContext.getBean("mapBean");
+  sayHell4.sayMapGood();
+  
+  
+  SayHelloImpl4 sayHell42 =  (SayHelloImpl4) applicationContext.getBean("mapBean2");
+  sayHell42.sayMapGood2();
+
+
+   ApplicationContext applicationContext= WebApplicationContextUtils.getWebApplicationContext(getRequest().getServletContext());
+   applicationContext.getBean(tClass);
+   
+   private HttpServletRequest getRequest(){
+        return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+    }
+
+什么也不写获取类名
+@Component 
+Key = groupHandler, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.GroupHandler@1d28c75b
+Key = normalHandler, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.NormalHandler@620cfe1
+Key = promotionHandler, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.PromotionHandler@4c56bcc9
+@Component("2")
+Key = 2, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.GroupHandler@5aaf644a
+Key = 1, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.NormalHandler@4f8a8edf
+Key = 3, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.PromotionHandler@3bfdc74d
