@@ -28,3 +28,13 @@ Key = promotionHandler, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.Pro
 Key = 2, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.GroupHandler@5aaf644a
 Key = 1, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.NormalHandler@4f8a8edf
 Key = 3, Value = com.mai.guofeng.demo.handlerdemo.handler.biz.PromotionHandler@3bfdc74d
+
+
+ ApplicationContext aa= new ClassPathXmlApplicationContext("123.xml");
+Spring--@configuration 和 @Bean
+https://www.cnblogs.com/microcat/p/7074720.html
+ ApplicationContext ctx = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
+
+
+ 透过现象看原理：详解Spring中Bean的this调用导致AOP失效的原因
+ https://my.oschina.net/guangshan/blog/1807721
