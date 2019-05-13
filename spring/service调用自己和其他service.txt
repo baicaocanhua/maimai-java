@@ -1,0 +1,89 @@
+java web框架中service层调用本service层方法，方法不自动提交
+https://blog.csdn.net/lieyanhaipo/article/details/79172151
+
+@Transtional
+class TestServiceImpl implement TestService{
+    @autowired
+    private TestDao testDao；
+
+    @override
+    public testA(){
+        Test test = new Test("this is a test");
+        this.testB(test);
+    }
+
+    @override
+    public testB(Test test){
+        testDao.save(test);
+    }
+}
+
+此时B方法不会自动提交,因此save方法虽然执行了但不会保存
+
+解决办法：将testA()方法放到别的service层，testB()依旧放在当前，保证两个不在一个serivce即可。
+--------------------- 
+作者：代码痴汉 
+来源：CSDN 
+原文：https://blog.csdn.net/lieyanhaipo/article/details/79172151 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+非Controller中调用Service
+笔记，参考网上资料，非Controller中调用Service
+
+1.增加文件ApplicationContextHelper.java
+
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+ 
+public class ApplicationContextHelper implements ApplicationContextAware {
+ 
+    private static ApplicationContext appCtx;
+ 
+    @Override
+    public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException {
+        appCtx = applicationContext;
+    }
+ 
+    public static Object getBean( String beanName ) {
+        return appCtx.getBean( beanName );
+    }
+ 
+    public static <T> T getBean(Class<T> clz) {
+        return (T)appCtx.getBean(clz);
+    }
+}
+2.在spring.xml加入
+<bean id="SpringApplicationContext" class="com.library.common.ApplicationContextHelper"></bean>
+
+3.调用方法
+
+YourService us=ApplicationContextHelper.getBean(YourService.class);
+--------------------- 
+作者：batterMRTAN 
+来源：CSDN 
+原文：https://blog.csdn.net/batterMRTAN/article/details/73368847 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+Spring中同一个service中方法相互调用事务不生效问题解决方案
+https://blog.csdn.net/panchao888888/article/details/82866315
+
+spring的service类调用自己方法事务无效
+https://blog.csdn.net/qq_34021712/article/details/75949779
+
+
+所以在同一个类中一个无事务的方法调用另一个有事务的方法，事务是不会起作用的。
+
+
+Spring service本类中方法调用另一个方法事务不生效问题
+https://blog.csdn.net/dapinxiaohuo/article/details/52092447
+
+spring service层方法调用同类中的方法 事务不生效？
+https://blog.csdn.net/qq_39597203/article/details/87434879
+
+consumerConnection -n 127.0.0.1:9876 -g PushConsumer
+topicStatus -n 127.0.0.1:9876 -t xiaomai
+
+consumerProgress -n 127.0.0.1:9876 -g PushConsumer
+

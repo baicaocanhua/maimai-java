@@ -1,0 +1,10 @@
+在远程请求时(不在同一个域下)，所有POST请求都将转为GET请求。因为将使用DOM的script标签来加载。
+
+对于有提交功能（如form的submit）的函数进行操作时，如果js出错，会出发自动提交功能，然后以 GET 方法提交数据到后台处理。
+
+当post请求代码中出现语法错误时，代码本身有时候是不报错的。但是post请求却无法提交，而是将post请求信息封装到url地址中，以get请求方式提交。
+
+
+post请求重定向后变成了GET请求
+https://blog.csdn.net/nakey_xie/article/details/82837413
+307

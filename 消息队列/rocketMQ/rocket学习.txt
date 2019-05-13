@@ -1,0 +1,49 @@
+RocketMQ——广播消费模式与集群消费模式
+https://blog.csdn.net/gwd1154978352/article/details/80802674?utm_source=blogxgwz0
+
+
+RocketMQ有两种消费模式：BROADCASTING广播模式，CLUSTERING集群模式，默认的是 集群消费模式。
+
+广播消费指的是：一条消息被多个consumer消费，即使这些consumer属于同一个ConsumerGroup,
+消息也会被ConsumerGroup中的每个Consumer都消费一次，广播消费中ConsumerGroup概念可以认为在消息划分方面无意义
+
+集群消费模式：一个ConsumerGroup中的Consumer实例平均分摊消费消息。
+例如某个Topic有9条消息，其中一个ConsumerGroup有3个实例（可能是3个进程，或者3台机器），
+那么每个实例只消费其中部分，消费完的消息不能被其他实例消费。
+
+
+RocketMQ源码解读——同一消费组下不同消费者订阅关系不同时
+消费关系不停地相互覆盖。
+https://blog.csdn.net/weixin_33922670/article/details/87988121
+
+点对点与发布订阅最初是由JMS定义的。这两种模式主要区别或解决的问题就是发送到队列的消息能否重复消费(多订阅)
+
+消息队列中点对点与发布订阅区别
+http://www.it610.com/article/4310125.htm
+
+发布订阅模式下，能否实现订阅者负载均衡消费呢？当发布者消息量很大时，显然单个订阅者的处理能力是不足的。实际上现实场景中是多个订阅者节点组成一个订阅组负载均衡消费topic消息即分组订阅，
+
+多个consumer使用同一个group.id消费同一个topic
+只会有一个consumer能够读取到数据, 其它的consumer是无法消费到数据的. 谁要是知道怎么做,恳请告知!
+ 只要创建多个partition就可以了
+ https://blog.csdn.net/u012307002/article/details/51308693
+
+https://baijiahao.baidu.com/s?id=1611936997077634119&wfr=spider&for=pc
+ 一文入门Rocketmq
+ 另外多组ConsumerGroup之间，对于同一个Topic是广播订阅的。（翻译一下就是说：Topic的一条消息会广播给所有订阅的ConsumerGroup，就是每个ConsumerGroup都会收到），
+ 但是在一个ConsumerGroup内部给个Consumer是负载消费消息的，（翻译一下就是：一条消息在一个group内只会被一个Consumer消费）
+
+
+RocketMQ使用
+https://www.cnblogs.com/lizhangyong/p/8978855.html
+ 一个Consumer Group下的多个Consumer以均摊方式消费消息，如果设置为广播方式，那么这个Consumer Group下的每个实例都消费全量数据。
+
+
+ Windows下rocketmq mqnamesrv.exe 启动成功，但是mqbroker.exe启动失败
+ https://www.cnblogs.com/roujingchuxia/p/7685796.html
+ 解决办法，删除C:\Users\"当前系统用户名"\store下的所有文件，就可以了
+
+
+ 
+ RocketMQ——广播消费模式与集群消费模式 有代码
+ https://blog.csdn.net/gwd1154978352/article/details/80802674?utm_source=blogxgwz0
