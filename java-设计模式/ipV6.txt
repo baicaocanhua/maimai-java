@@ -1,0 +1,25 @@
+wiki/如何开启IPv6
+https://github.com/XX-net/XX-Net/wiki/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFIPv6
+
+
+xx-net设置中高级配置ipv6隧道启用失败解决办法
+https://blog.csdn.net/moxun2011/article/details/80743653
+
+xx.net可能会出现的小bug（Ipv6篇）
+https://blog.csdn.net/siri99999/article/details/83244988
+
+http://www.test-ipv6.com/
+
+windows 启用ipv6（for XX-net）补充“Ping请求找不到主机”问题
+https://www.cnblogs.com/xuanmanstein/p/7675406.html
+
+
+最简XX-NET启用IPV6教程
+https://blog.csdn.net/sxyandapp/article/details/78427397
+
+google的ip6DNS
+操作还是和上面一样，然后换下面这组ipv6的DNS即可：
+
+在上面一行输入：2620:0:ccc::2；
+
+在上面一行输入：2620:0:ccd::2；
