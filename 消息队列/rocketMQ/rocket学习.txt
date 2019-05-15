@@ -47,3 +47,13 @@ https://www.cnblogs.com/lizhangyong/p/8978855.html
  
  RocketMQ——广播消费模式与集群消费模式 有代码
  https://blog.csdn.net/gwd1154978352/article/details/80802674?utm_source=blogxgwz0
+
+
+
+ RocketMQ-广播模式消费 系列
+ https://www.cnblogs.com/happyflyingpig/p/8215552.html
+
+
+ InstanceName
+ https://blog.csdn.net/weixin_39047791/article/details/82858765
+ Rocketmq同项目多个生产者多个消费者问题

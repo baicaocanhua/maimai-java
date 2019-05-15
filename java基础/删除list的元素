@@ -1,0 +1,78 @@
+ List<Integer> integers = new ArrayList<>(5);
+        integers.add(1);
+        integers.add(2);
+        integers.add(2);
+        integers.add(4);
+        integers.add(5);
+
+        Iterator<Integer> iterator = integers.iterator();
+        while (iterator.hasNext()){
+            Integer next = iterator.next();
+            if (next%2==0) {
+                iterator.remove();
+            }
+        }
+        System.out.println(integers);
+
+方法2：
+ List<Integer>  i= integers.stream().filter(x->x%2!=0).collect(Collectors.toList());
+ 不改变原有对象
+
+
+方法3：
+
+  integers.removeIf(x -> x % 2 == 0);
+
+
+方法4： 在remove操作后，将索引位置-1，
+ArrayList<Integer> arr = new ArrayList<Integer>();
+        for(int i = 10;i<15;i++)
+            arr.add(i);
+        arr.add(10);
+        arr.add(10);
+        arr.add(10);
+        arr.add(10);
+        arr.add(11);
+        System.out.println("删除前："+arr.size());
+        for(int i = 0;i<arr.size();i++){
+            
+            if(10 == arr.get(i)){
+                
+                arr.remove(i);
+                i--;
+            }
+
+        }
+
+        System.out.println("删除后："+arr.size());
+
+ Java 8之前的方法是通过迭代找到元素删除：
+
+Iterator<String> iter = strList2.iterator();
+
+while (iter.hasNext()) {
+
+String tmp = iter.next();
+
+if (tmp.equalsIgnoreCase("a")) {
+
+iter.remove();
+
+}
+
+}
+
+Java中ArrayList remove会遇到的坑
+https://www.cnblogs.com/woshimrf/p/java-arryalist-remove.html
+
+
+那些年，我们在Java ArrayList Remove方法遇到的坑
+https://blog.csdn.net/Sun_flower77/article/details/78008491
+
+ArrayList中remove方法遇到的坑
+https://www.jianshu.com/p/6a3a11b1adb2
+
+Java - List集合中如何删除多个元素? remove( )方法 ?
+https://blog.csdn.net/qq_42986107/article/details/81988470
+
+
