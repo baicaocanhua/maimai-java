@@ -1,0 +1,45 @@
+SpringBoot 如何从前台传递数组
+
+$.ajax({
+                    url: 'deleteBsGiftById',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        ids: idArray
+                    }
+）}
+
+@PostMapping("deleteBsGiftById")
+    @ResponseBody
+    public boolean deleteBsGiftById(@RequestParam(value = "ids[]") String[] ids) {
+        return true;
+    }
+
+ajax-传递list数组，springboot接收参数  这个傻逼传递的不是数组，是对象
+http://www.pianshen.com/article/8998195493/
+
+
+ajax传参数组,spring boot 接收
+https://www.jianshu.com/p/85251b746058
+
+
+
+http://localhost:9088/arr3?data=22&data=44
+ public String arr3(String[] data) {
+
+
+https://www.jianshu.com/p/4ed9f5c9f958
+Springboot+ajax传输json数组以及单条数据的方法
+
+ //json数组传递
+
+    @RequestMapping("/jsonAdd")
+    @ResponseBody
+    public String jsonArrayAdd(@RequestParam("ids") String ids) {
+
+        JSONObject jsonObject = JSONObject.fromObject(ids);
+        System.out.println("jsonObject==>" + jsonObject);
+        Student stu = (Student) JSONObject.toBean(jsonObject, Student.class);
+        System.out.println("stu==>" + stu);
+        return "成功了!";
+    }

@@ -1,0 +1,24 @@
+https://zhidao.baidu.com/question/391000222.html
+递归的底层实现其实是一个栈.栈的特点是后进先出,也就是最后进入栈的事件是最先被处理的.
+递归就是这样运作.比如计算阶乘函数F(n)=n!=n*F(n-1)=....
+写成递归,我用java
+public static long F(long num){
+if(num<=1)
+return 1;
+return F(num-1)*num;
+}
+static public void main(String argv[]){
+System.out.println(F(5));
+}:
+第一次计算的时候是F(num),进入之后会直接return F(num-1)*num.也就是把这一项入栈.
+然后这一项到底是多少还不知道需要继续计算.
+第二次递归就是 F(num-1-1)*(num-1).入栈.
+直到满足num<=1.计算出最后入栈的F(1)=1;return这句就限定了最终栈的大小.
+然后开始出栈.第一个出栈的是F(1);已经计算得出是1;
+第二个出栈是F(2).由F(1)可以得知F(2).
+这样直到栈空,阶乘也就计算出来了.
+递归的内部是栈实现的.理解了这个,你也可以自己写非递归的递归,也就是用栈实现的递归.
+
+
+函数调用(递归函数调用)底层机制
+https://blog.csdn.net/yunzhongguwu005/article/details/9215507

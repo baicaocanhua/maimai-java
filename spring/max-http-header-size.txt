@@ -1,0 +1,18 @@
+
+单位  字节
+1K=1024 字节
+
+server.tomcat.max-http-header-size失效@deprecated解决办法
+https://blog.csdn.net/qq_16513911/article/details/86571243
+
+Jvisualvm 
+max-http-header-size 引发的一起血案（附：查gc方法）
+https://blog.csdn.net/sinat_24044957/article/details/82493561
+
+
+关于http header最大长度的那些事
+https://cloud.tencent.com/developer/news/240970
+
+
+springcloud坑之 feign 消费者调用生产者 数据量过大时报Request header is too large
+https://blog.csdn.net/aa292016616/article/details/80599149

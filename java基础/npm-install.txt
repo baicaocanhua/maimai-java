@@ -1,0 +1,20 @@
+npm install将依赖关系安装到node_modules/目录中，用于正在处理的节点项目。你可以调用install另一个node.js项目（模块），将其作为项目的依赖项安装。
+
+npm run build是别名npm build，除非你在package.json文件中指定了什么“build”，否则它什么也不做。它可以让你在项目中使用之前为你的项目执行任何必要的构建/准备任务。
+
+npm install 在你的package.json配置中安装依赖关系。
+npm run build 运行脚本“build”并创建一个脚本来运行你的应用程序 - 比如说server.js
+npm start 运行“开始”脚本，这将是“节点server.js”
+很难确切地说出问题是什么，但基本上如果你看看你的脚本配置，我会猜测“构建”使用某种构建工具来创建你的应用程序，而“开始”假定构建已经完成，但然后失败，如果失败该文件不在那里。
+
+
+ng build  常规的压缩操作    代码体积最大
+
+ng build --aot   angular预编译   对angular中浏览器结实的部分转化成浏览器能直接读取的内容    代码体积较小
+
+ng build --prod   angular预编译    取消console等显示  尽可能合并相同功能代码    代码体积最小 
+--------------------- 
+作者：renkind 
+来源：CSDN 
+原文：https://blog.csdn.net/renkind/article/details/89153367 
+版权声明：本文为博主原创文章，转载请附上博文链接！
