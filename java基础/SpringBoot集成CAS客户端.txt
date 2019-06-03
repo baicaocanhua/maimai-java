@@ -1,0 +1,25 @@
+SpringBoot集成CAS客户端
+https://blog.csdn.net/qq_35959573/article/details/81080076
+
+
+spring boot-整合CAS Client实现单点登陆验证 ***
+实现方式一：使用第三方的starter
+https://blog.csdn.net/liuchuanhong1/article/details/73176603
+
+
+springboot整合cas的client端
+https://blog.csdn.net/qq_37293364/article/details/82905581
+
+cas单点登录 （二） 客户端与springboot集成
+https://blog.csdn.net/xiweiller/article/details/82684688
+
+
+CAS5.3服务器搭建及SpringBoot整合CAS解决分布式系统安全
+https://blog.csdn.net/lhc0512/article/details/82466246
+
+CAS-5.3单点登录/退出客户端搭建(Springboot)
+https://www.jianshu.com/p/15b88fa0d068
+
+
+CAS之5.2x版本之客户端集成（Springboot）-yellowcong
+https://blog.csdn.net/yelllowcong/article/details/79241777
