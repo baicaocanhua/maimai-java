@@ -1,0 +1,39 @@
+
+MethodInvokingJobDetailFactoryBean 
+【spring-boot】 springboot整合quartz实现定时任务
+https://www.cnblogs.com/lic309/p/4089633.html
+
+
+Springboot 集成Quartz的使用（解决quartz的job无法注入spring对象的问题）
+https://www.cnblogs.com/weiyuanquyu/p/9428064.html
+
+
+
+Quartz框架（一）—Quartz的基本配置
+https://www.jianshu.com/p/2a5d3b6336ba
+
+
+
+
+SpringBoot整合Quartz作为调度中心完整实用例子
+https://www.cnblogs.com/ealenxie/p/9134602.html
+
+spring boot 集成quartz（使用spring boot、quartz）
+https://www.imooc.com/article/36278
+
+SpringBoot2.0集成Quartz
+https://www.jianshu.com/p/dc814e8014b0
+
+
+
+springboot+mysql实现quartz集群搭建
+https://www.cnblogs.com/boshen-hzb/p/9554088.html
+
+
+
+Spring中使用Quartz之MethodInvokingJobDetailFactoryBean配置任务
+https://www.cnblogs.com/JoeyWong/p/9306496.html
+
+Quartz是一个强大的企业级任务调度框架，Spring中继承并简化了Quartz。
+
+Spring中使用Quartz的3种方法（MethodInvokingJobDetailFactoryBean,implements Job,extends QuartzJobBean）；
