@@ -43,3 +43,16 @@ Springboot+ajax传输json数组以及单条数据的方法
         System.out.println("stu==>" + stu);
         return "成功了!";
     }
+
+
+
+
+["xx0","xx1","xx2","xx3","xx4","xx5","xx6","xx7","xx8","xx9"]
+  @RequestMapping("list")
+    @ResponseBody
+    public String list(@RequestBody List<String> list) {
+        return "123";
+    }
+
+springmvc controller层接收List类型的参数
+    https://blog.csdn.net/sweetgirl520/article/details/79127223
