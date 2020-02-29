@@ -1,0 +1,17 @@
+IDEA创建多个模块MavenSpringBoot项目
+https://www.cnblogs.com/a8457013/p/9254917.html
+
+
+IDEA创建基于springboot的多个module聚合项目，并生成war包
+https://blog.csdn.net/zhang_ming_xuan/article/details/78615079
+
+
+IDEA如何创建多个模块Maven SpringBoot项目
+https://jingyan.baidu.com/article/e2284b2ba1602fe2e7118d77.html
+
+idea创建springboot多模块项目
+https://blog.csdn.net/lhw_csd/article/details/82183008
+
+
+IDEA+Maven+多个Module模块（创建多模块SpringBoot整合项目）
+https://blog.csdn.net/tiantangdizhibuxiang/article/details/81130297

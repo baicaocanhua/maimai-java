@@ -1,0 +1,18 @@
+Nginx中proxy_pass的斜杠问题
+https://www.jianshu.com/p/c751250a5112
+
+
+nginx的proxy_pass后面有无斜杠的如何区别
+https://jingyan.baidu.com/article/63acb44a1f478161fcc17ee8.html
+
+
+整理] Nginx Location 匹配规则
+https://www.cnblogs.com/youjiaxing/p/10084357.html
+
+
+
+jstack命令的使用
+https://www.cnblogs.com/taiguyiba/p/9470861.html
+
+JVM监控命令详解(转)
+https://www.cnblogs.com/rainy-shurun/p/5732341.html
