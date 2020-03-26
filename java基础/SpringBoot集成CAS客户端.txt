@@ -23,3 +23,17 @@ https://www.jianshu.com/p/15b88fa0d068
 
 CAS之5.2x版本之客户端集成（Springboot）-yellowcong
 https://blog.csdn.net/yelllowcong/article/details/79241777
+
+
+
+
+服务端
+
+jasig4.0 cas 登录测试
+https://libinchinabj.iteye.com/blog/2178155
+
+https://blog.csdn.net/oumuv/article/details/84306361
+CAS（二）CAS服务器动态验证，CAS使用MySQL数据库验证
+
+CAS（一）搭建CAS - server服务器
+https://blog.csdn.net/oumuv/article/details/83377945

@@ -8,3 +8,16 @@
 post请求重定向后变成了GET请求
 https://blog.csdn.net/nakey_xie/article/details/82837413
 307
+
+
+
+前台 post方法提交却变成了 get 方法
+对于有提交功能（如form的submit）的函数进行操作时，如果js出错，会触发自动提交功能，然后以 GET 方法提交数据到后台处理。
+
+
+post提交后端变成get
+因为js代码里写错了id名，居然不报错。。
+
+
+http从定向到https后post请求被强制转换为get请求
+https://blog.csdn.net/qq_37241680/article/details/81000462
