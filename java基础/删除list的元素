@@ -1,4 +1,4 @@
- List<Integer> integers = new ArrayList<>(5);
+c List<Integer> integers = new ArrayList<>(5);
         integers.add(1);
         integers.add(2);
         integers.add(2);
@@ -41,9 +41,9 @@ ArrayList<Integer> arr = new ArrayList<Integer>();
                 arr.remove(i);
                 i--;
             }
-
+    
         }
-
+    
         System.out.println("删除后："+arr.size());
 
  Java 8之前的方法是通过迭代找到元素删除：

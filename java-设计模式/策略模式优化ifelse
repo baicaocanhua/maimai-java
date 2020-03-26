@@ -1,7 +1,9 @@
 利用策略模式优化过多 if else 代码
 https://juejin.im/post/5c5172d15188256a2334a15d
 
+# 项目中的if else太多了，该怎么重构？
 
+https://blog.csdn.net/zzti_erlie/article/details/102988486
 
 Spring Boot中如何干掉if else
 https://juejin.im/post/5c551122e51d457fcc5a9790
@@ -15,7 +17,7 @@ Class<?> clazz=Class.forName(CUSH_CLASS_NAME[type2]);
 			Constructor<?> constructor=clazz.getConstructor(paramsType);
 			this.cushSuper=(CushSuper)constructor.newInstance(parmas);
 
---------------------- 
+---------------------
 作者：幸福棒棒糖__fxx 
 来源：CSDN 
 原文：https://blog.csdn.net/qq_33157666/article/details/80399234 
@@ -26,7 +28,7 @@ Class clazz=Class.forName(class_path);
             Method excute =clazz.getDeclaredMethod("excute");
             excute.invoke(clazz.newInstance());
 
---------------------- 
+---------------------
 作者：lollipop诗 
 来源：CSDN 
 原文：https://blog.csdn.net/u012840660/article/details/80484342 
