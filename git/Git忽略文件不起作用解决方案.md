@@ -25,3 +25,26 @@ https://shiyousan.com/post/636470505667009340/
 
 [https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93](https://git-scm.com/book/zh/v2/Git-基础-记录每次更新到仓库)
 
+
+
+
+
+```
+解决方法: git清除本地缓存（改变成未track状态），然后再提交:
+[root@kevin ~]``# git rm -r --cached .
+[root@kevin ~]``# git add .
+[root@kevin ~]``# git commit -m 'update .gitignore'
+[root@kevin ~]``# git push -u origin master
+```
+
+
+
+https://www.cnblogs.com/rainbowk/p/10932322.html
+
+# [Git忽略规则(.gitignore配置）不生效原因和解决](https://www.cnblogs.com/rainbowk/p/10932322.html)
+
+
+
+# git如何忽略已经提交的文件 (.gitignore文件无效)
+
+https://www.jianshu.com/p/e5b13480479b
