@@ -1,3 +1,11 @@
+
+
+
+
+minikube start
+
+
+
 # CentOS7环境部署kubenetes1.12版本五部曲之一：标准化机器
 
  https://blog.csdn.net/boling_cavalry/article/details/83692428 
